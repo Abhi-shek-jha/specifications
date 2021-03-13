@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>laptop</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <div class="logo">
+          <img src="logo.jpg" alt="" />
+        </div>
+        <div class="navlink">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Laptop</a></li>
+            <li><a href="#">Components</a></li>
+            <li><a href="#">Card</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="info">
+        <div class="overlay"></div>
+        <img class="lappy" src="./xyz.png" alt="" />
+        <div id="circle">
+          <div class="feature one">
+            <img src="./battery2.png" alt="" />
+            <div>
+              <h1>Battery</h1>
+              <p>4000MH , long-lasting, upto 8hours</p>
+            </div>
+          </div>
+          <!-- <img class="lappy" src="./laptop.jpg" alt="" /> -->
+          <div class="feature two">
+            <img src="./camxyz.png" alt="" />
+            <div>
+              <h1>camera</h1>
+              <p>10MP, with night mode and portrait</p>
+            </div>
+          </div>
+          <div class="feature three">
+            <img src="./storage2.png" alt="" />
+            <div>
+              <h1>Feature</h1>
+              <p>15inch screen size, foldable</p>
+            </div>
+          </div>
+          <div class="feature four">
+            <img src="./storage3.png" alt="" />
+            <div>
+              <h1>storage</h1>
+              <p>512gb ssd with 1tb hdd</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <img id="upbtn" src="./ubtn2.png" alt="" />
+        <h3>feature</h3>
+        <img id="dnbtn" src="./ubtn2.png" alt="" />
+      </div>
+    </div>
+    <script>
+      var circle = document.getElementById("circle");
+      var upbtn = document.getElementById("upbtn");
+      var dnbtn = document.getElementById("dnbtn");
+
+      var rotatevalue = circle.style.transform;
+      var rotatesum;
+
+      upbtn.onclick = function () {
+        rotatesum = rotatevalue + "rotate(-90deg)";
+        circle.style.transform = rotatesum;
+        rotatevalue = rotatesum;
+      };
+      dnbtn.onclick = function () {
+        rotatesum = rotatevalue + "rotate(90deg)";
+        circle.style.transform = rotatesum;
+        rotatevalue = rotatesum;
+      };
+    </script>
+  </body>
+</html>
